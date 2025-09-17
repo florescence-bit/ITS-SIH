@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/florescence-bit/s-music.git"
+    "url": "git+https://github.com/florescence-bit/ITS-SIH.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/florescence-bit/s-music/issues"
+    "url": "https://github.com/florescence-bit/ITS-SIH/issues"
   },
-  "homepage": "https://github.com/florescence-bit/s-music#readme",
+  "homepage": "https://github.com/florescence-bit/ITS-SIH#readme",
   "description": "",
   "dependencies": {
     "react-router-dom": "^7.9.1"
