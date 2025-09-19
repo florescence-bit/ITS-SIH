@@ -1,24 +1,16 @@
-const React = require("react");
+import React from "react";
 
-function SafetyTips() {
-  return React.createElement(
-    "div",
-    { className: "tips-container" },
-    React.createElement("h2", null, "Safety Tips"),
-    React.createElement(
-      "ul",
-      null,
-      [
-        "Keep your valuables secure and avoid displaying them in public.",
-        "Use authorized taxis and public transport.",
-        "Stay aware of your surroundings, especially in crowded places.",
-        "Save emergency contacts on your phone.",
-        "Respect local customs and laws."
-      ].map(function(tip, i) {
-        return React.createElement("li", { key: i }, tip);
-      })
-    )
+export default function SafetyTips() {
+  return (
+    <div style={{ padding: "2rem", maxWidth: 500, margin: "auto" }}>
+      <h2>Safety Tips</h2>
+      <ul>
+        <li>Keep your valuables secure and avoid displaying them in public.</li>
+        <li>Use authorized taxis and public transport.</li>
+        <li>Stay aware of your surroundings, especially in crowded places.</li>
+        <li>Save emergency contacts on your phone.</li>
+        <li>Respect local customs and laws.</li>
+      </ul>
+    </div>
   );
 }
-
-module.exports = SafetyTips;

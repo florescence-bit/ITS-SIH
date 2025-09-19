@@ -1,17 +1,20 @@
-const React = require("react");
-const { Link } = require("react-router-dom");
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./Navbar.css";
 
-function Navbar() {
-  return React.createElement(
-    "nav",
-    { className: "navbar" },
-    [
-      React.createElement(Link, { to: "/home", key: "home" }, "Home"),
-      React.createElement(Link, { to: "/safety-tips", key: "tips" }, "Safety Tips"),
-      React.createElement(Link, { to: "/emergency-contacts", key: "contacts" }, "Emergency Contacts"),
-      React.createElement(Link, { to: "/", key: "logout" }, "Logout")
-    ]
+export default function Navbar() {
+  const location = useLocation();
+  // Hide navbar on welcome page for a clean look
+  if (location.pathname === "/") return null;
+  return (
+    <nav className="navbar">
+      <div className="navbar-logo">Smart India Tourism Safety</div>
+      <div className="navbar-links">
+        <Link to="/home">Home</Link>
+        <Link to="/safety-tips">Safety Tips</Link>
+        <Link to="/emergency-contacts">Emergency Contacts</Link>
+        <Link to="/about">About</Link>
+      </div>
+    </nav>
   );
 }
-
-module.exports = Navbar;

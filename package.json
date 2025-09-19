@@ -2,26 +2,31 @@
   "name": "its-sih",
   "version": "1.0.0",
   "private": true,
-  "description": "",
-  "main": "index.js",
+  "description": "Smart India Tourism Safety System - AI-Powered Digital Tourist ID Generation, Safety Monitoring & Incident Response Platform.",
+  "main": "src/main.js",
   "scripts": {
-    "start": "npx serve public"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/florescence-bit/ITS-SIH.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/florescence-bit/ITS-SIH/issues"
-  },
-  "homepage": "https://github.com/florescence-bit/ITS-SIH#readme",
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^7.9.1",
-    "serve": "^14.2.3"
+    "express": "^5.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.0",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
-

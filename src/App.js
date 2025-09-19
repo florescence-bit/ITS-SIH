@@ -1,28 +1,28 @@
-const React = require("react");
-const { Routes, Route } = require("react-router-dom");
-const Welcome = require("./components/Welcome");
-const Login = require("./components/Login");
-const Home = require("./components/Home");
-const SafetyTips = require("./components/SafetyTips");
-const EmergencyContacts = require("./components/EmergencyContacts");
-const Navbar = require("./components/Navbar");
-require("./style.css");
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Welcome from "./pages/welcome";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+import SafetyTips from "./components/SafetyTips";
+import EmergencyContacts from "./components/EmergencyContacts";
+import "./styles/globals.css";
 
 function App() {
-  return React.createElement(
-    React.Fragment,
-    null,
-    React.createElement(Navbar, null),
-    React.createElement(
-      Routes,
-      null,
-      React.createElement(Route, { path: "/", element: React.createElement(Welcome, null) }),
-      React.createElement(Route, { path: "/login", element: React.createElement(Login, null) }),
-      React.createElement(Route, { path: "/home", element: React.createElement(Home, null) }),
-      React.createElement(Route, { path: "/safety-tips", element: React.createElement(SafetyTips, null) }),
-      React.createElement(Route, { path: "/emergency-contacts", element: React.createElement(EmergencyContacts, null) })
-    )
+  return (
+    <React.Fragment>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/safety-tips" element={<SafetyTips />} />
+        <Route path="/emergency-contacts" element={<EmergencyContacts />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </React.Fragment>
   );
 }
 
-module.exports = App;
+export default App;

@@ -1,28 +1,16 @@
-const React = require("react");
+import React from "react";
 
-function EmergencyContacts() {
-  return React.createElement(
-    "div",
-    { className: "contacts-container" },
-    React.createElement("h2", null, "Emergency Contacts"),
-    React.createElement(
-      "ul",
-      null,
-      [
-        { label: "Police", number: "100" },
-        { label: "Ambulance", number: "102" },
-        { label: "Fire", number: "101" },
-        { label: "Tourist Helpline", number: "1363" },
-        { label: "Women Helpline", number: "1091" }
-      ].map(function(contact, i) {
-        return React.createElement(
-          "li",
-          { key: i },
-          contact.label + ": " + contact.number
-        );
-      })
-    )
+export default function EmergencyContacts() {
+  return (
+    <div style={{ padding: "2rem", maxWidth: 500, margin: "auto" }}>
+      <h2>Emergency Contacts</h2>
+      <ul>
+        <li>Police: 100</li>
+        <li>Ambulance: 102</li>
+        <li>Fire: 101</li>
+        <li>Tourist Helpline: 1363</li>
+        <li>Women Helpline: 1091</li>
+      </ul>
+    </div>
   );
 }
-
-module.exports = EmergencyContacts;
