@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "Smart India Tourism Safety System - AI-Powered Digital Tourist ID Generation, Safety Monitoring & Incident Response Platform.",
-  "main": "src/main.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -11,10 +10,9 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
     "react-scripts": "^5.0.1"
   },
   "browserslist": {
